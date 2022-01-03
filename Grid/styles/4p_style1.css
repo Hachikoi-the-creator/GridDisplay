@@ -1,0 +1,51 @@
+/* BASIC STYLES */
+html, body {
+    background-color: antiquewhite;
+    margin: 10px;
+    font-size: 2rem;
+}
+/* bad practice but works here lol */
+div {
+    color: rgb(255, 208, 215);
+    background-color: rgb(213, 168, 255);
+}
+.container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.container2 > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    color: rgb(255, 80, 109);
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+}
+
+/* GRID STUFF */
+.container {
+    border: 1px solid rgb(219, 0, 0);
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: repeat(2, 100px);
+}
+
+.container2 {
+    border: 1px solid rgb(219, 0, 0);
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-rows: repeat(2, 100px);
+}
+div > div {
+    margin: 2px;
+    background-color: antiquewhite;
+    color: black;
+}

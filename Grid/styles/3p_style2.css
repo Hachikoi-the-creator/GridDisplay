@@ -1,0 +1,45 @@
+/* Basic styling */
+.container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    background-color: rgb(58, 58, 187);
+}
+
+html, body {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 10px;
+    margin: 0;
+    background-color: antiquewhite;
+    color:antiquewhite;
+
+}
+
+/* Grid Stuff */
+.container {
+    border: 1px solid rgb(255, 0, 43);
+    height: 100%;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(2, 100px);
+    /* send to right */
+    /* justify-content: end; */
+
+    /*** ++Justify options ***/
+    /* stick to sides, spaces in between */
+    /* justify-content: space-between; */
+
+    /* equal spaces sides and in the middle */
+    /* justify-content: space-evenly; */
+
+    /* weird half space around items, turns full in between items */
+    justify-content: space-around;
+
+    /* send to bottom */
+    align-content: end;
+}
+
+

@@ -1,0 +1,77 @@
+/* General styling */
+html, body {
+    background-color: #ffeead;
+    margin: 10px;
+    font-size: 21px;
+}
+
+p {
+    color: #96ceb4;
+    text-align: center;
+}
+
+.flexbox_header > div {
+    display: flex;
+    font-size: 1em;
+    padding: 0 20px;
+}
+.flexbox_header, .grid_page {
+    background-color: rgb(105, 216, 179);
+}
+
+.grid_page > div {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+.grid_page > div:nth-child(2){
+    background-color: darkcyan;
+}
+.grid_page > div:nth-child(3){
+    background-color: azure;
+}
+
+/* MAIN STUFF */
+
+/*** flexbox ***/
+.flexbox_header {
+    display: flex;
+}
+
+.flexbox_header > div:nth-child(3) {
+    /* Push 3rd child to the left! */
+    margin-left: auto;
+}
+
+/*** grid & flexbox ***/
+/*  */
+.header{
+    grid-column: 1 / -1;
+    display: flex;
+}
+.header > div:nth-child(2){
+    /* separate the words */
+    padding: 0 40px;
+}
+.header > div:nth-child(3) {
+    /* push to the left */
+    margin-left: auto;
+}
+
+/* only grid */
+.grid_page {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 40px 200px 40px;
+}
+
+/* start / end */
+.menu {
+    grid-column: 1 / 2;
+}
+.content {
+    grid-column: 2 / -1;
+}
+.footer {
+    grid-column: 1 / -1;
+}

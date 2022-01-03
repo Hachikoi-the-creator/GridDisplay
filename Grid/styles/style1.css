@@ -1,0 +1,47 @@
+/* Basic styling */
+html, body {
+    margin: 10px;
+    background-color: antiquewhite;
+    color:antiquewhite;
+
+}
+.container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    background-color: rgb(58, 58, 187);
+}
+
+/* Grid stuff */
+.container {
+    /* grid-template-rows: 50px 50px; */
+    display: grid;
+
+    /****The only one that changes is the middle one****/
+    /* grid-template-columns: 100px auto 100px; */
+
+    /***Special unit for grid, a fraction of all the space***/
+    /* grid-template-columns: 1fr 1fr 2fr; */
+    
+    /*** shorhand for repeating sizes ***/
+    /* grid-template-columns: repeat(3, 1fr); */
+
+    /*** Shorthand for columns & rows ***/
+    grid-template:repeat(3, 90px) / repeat(2, 1fr);
+
+    gap: 3px
+}
+
+.contain_pos {
+    display: grid;
+    gap: 40px;
+    grid-template: 40px 200px 40px / repeat(2, 1fr);
+    background-color: brown;
+}
+
+.header {
+    /* we have 2 columns, 1 = leftmost corner, 3 = righmost corner  */
+    grid-column-start: 1;
+    grid-column-end: 3;
+}

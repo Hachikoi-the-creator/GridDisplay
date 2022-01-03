@@ -1,0 +1,50 @@
+/* Basic styling */
+html, body {
+    margin: 10px;
+    background-color: antiquewhite;
+    color:rgb(0, 0, 0);
+
+}
+.container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    background-color: rgb(58, 58, 187);
+}
+
+.container > div > img {
+    /* every pic in same size */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*** Flexbox stuff ***/
+.container {
+    display: grid;
+    gap: 3px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-auto-rows: 75px;
+    /*--- Fix blank spaces left by images arranged in row ---*/
+    grid-auto-flow: dense;
+}
+
+.horizontal {
+    /*** Forces images to start on pos 1, leaving ugly spaces ***/
+    /* grid-column: 1 / span 2; */
+
+    /*** Leaves images start on any pos ***/
+    grid-column: auto / span 2;
+
+    /*** Short-hand for the above ***/
+    /* grid-column: span 2; */
+}
+.vertical {
+    grid-row: span 2;
+}
+.big {
+    grid-row: span 2;
+    grid-column: span 2;
+}
+

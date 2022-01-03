@@ -1,0 +1,41 @@
+/* Basic styling */
+.container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    background-color: rgb(58, 58, 187);
+}
+
+html, body {
+    box-sizing: border-box;
+    height: 100%;
+    /* Padding 10px instead of margin 10px gives more "control" */
+    margin: 0px;
+    padding: 10px;
+    background-color: antiquewhite;
+    color:antiquewhite;
+
+}
+
+/*** EXTRA NOTE ***/
+/* in order to use this template
+we need to define columns & rows first! */
+
+/* Grid stuff */
+.container {
+    height: 100%;
+    display: grid;
+    gap: 3px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 40px auto 40px;
+    grid-template-areas: 
+    "m m m h h h h h h h h h"
+    "m m m c c c c c c c c c"
+    "f f f f f f f f f f f f";
+}
+
+.header { grid-area: h; }
+.menu { grid-area: m; }
+.content { grid-area: c; }
+.footer { grid-area: f; }

@@ -1,0 +1,32 @@
+/* Basic styling */
+html, body {
+    margin: 10px;
+    background-color: antiquewhite;
+    color:antiquewhite;
+
+}
+.container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    background-color: rgb(58, 58, 187);
+}
+
+/* grid stuff */
+.container {
+    display: grid;
+    gap: 3px;
+    /*** -basic- wrap in grid (auto-fit)***/
+    /* grid-template-columns: repeat(auto-fit, 100px); */
+
+    /*** avoid ugly space when there's not enough space to fit another block ***/
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    /* grid-template-rows: repeat(2, 100px); */
+
+    /*** How to avoid the 3rd row going ugly, 
+    now template rows are no needed ***/
+    grid-auto-rows: 100px;
+
+}
+

@@ -1,0 +1,43 @@
+/* Basic styling */
+html, body {
+    box-sizing: border-box;
+    background-color: antiquewhite;
+    height: 100%;
+    padding: 10px;
+    margin: 0;
+}
+
+.container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    background-color: rgb(58, 58, 187);
+}
+
+/* Grid stuff - for past layout GOTO grid_pos.html*/
+.container {
+    height: 100%;
+    display: grid;
+    gap: 3px;
+    /* THIS CHANGES EVERYTHING! */
+    /* We give name to every column & row line/division */
+    /* can have multiple names! */
+    grid-template-columns: [main-start] 1fr [content-start] 5fr [content-end main-end];
+    grid-template-rows: [main-start] 40px [content-start] auto [content-end] 40px [main-end];
+}
+.header {
+    /* naming magic, MUST use name-desc convention */
+    /* by only givin the first part, knows where to start and where to end */
+    grid-column: main;
+}
+/* .menu { } no need to adjust*/
+.content {
+    /* grid-column: content; */
+
+    /*** with the template row naming we can write this in another way ***/
+    grid-area: content;
+}
+.footer {
+    grid-column: main;
+}
