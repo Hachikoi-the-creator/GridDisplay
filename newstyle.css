@@ -1,0 +1,48 @@
+/* Basic layout */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 6rem;
+  border-bottom: 3px ridge red;
+  width: 70vw;
+  margin: 0 auto;
+}
+
+.main {
+  margin: 3ch 6ch;
+}
+
+/* Galery Grid */
+.images-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 25px;
+}
+
+.images-grid__image {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 100%;
+}
+
+/* force the img to fit the container */
+.images-grid__image img { 
+  width: 100%;
+  height: auto;
+}
+
+img:hover {
+  border: 1px solid rgb(197, 0, 0);
+}
+
+.description {
+  text-transform: capitalize;
+  font-size: 3rem;
+  padding: 15px;
+  text-align: center;
+}
