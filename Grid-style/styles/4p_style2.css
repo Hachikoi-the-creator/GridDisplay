@@ -1,13 +1,15 @@
 /* General styling */
 html, body {
-    background-color: #ffeead;
+    background-color: antiquewhite;
     margin: 10px;
     font-size: 21px;
+    color: rgb(0, 32, 8);
 }
 
 p {
-    color: #96ceb4;
+    color: rgb(0, 126, 52);
     text-align: center;
+    text-decoration: underline;
 }
 
 .flexbox_header > div {

@@ -47,5 +47,5 @@ div {
 div > div {
     margin: 2px;
     background-color: antiquewhite;
-    color: black;
+    color: rgb(178, 96, 255);
 }

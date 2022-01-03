@@ -14,6 +14,7 @@ html, body {
     align-items: center;
     font-size: 23px;
     background-color: rgb(58, 58, 187);
+    font-size: 2rem;
 }
 
 /* Grid stuff - for past layout GOTO grid_pos.html*/
